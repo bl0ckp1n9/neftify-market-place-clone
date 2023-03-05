@@ -1,0 +1,35 @@
+
+
+.carousel.carousel-slider {
+    position:unset !important;
+}
+
+.control-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: unset !important;
+    left: unset !important;
+    bottom: -50px !important;
+}
+
+.carousel .control-arrow{
+    position: absolute !important;
+    width: 35px;
+    height: 35px;
+    background-color: #3b82f6 !important;
+    border-radius: 50%;
+}
+
+
+.carousel .control-prev.control-arrow {
+    right: 80px;
+}
+.carousel .control-next.control-arrow {
+    right: 20px !important;
+}
+.slide{
+    padding: 25px 20px;
+    transform: scale(1) perspective(1040px) rotateY(-18deg) rotateX(0) rotate(0);
+    position: relative;
+}

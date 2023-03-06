@@ -9,6 +9,9 @@ import Card from "./components/cards/card";
 import RankingCard from "@/pages/components/cards/rankingTopCard";
 import TrendingCard from "@/pages/components/cards/trendingCard";
 import CarouselSeg from "@/pages/components/segments/carouselSeg";
+import { WalletIcon } from "@heroicons/react/24/outline";
+import CreateAndSellCard from "@/pages/components/cards/createAndSetCard";
+import InfoLayout from "./components/layout/infoLayout";
 
 const galleryCards = [
   // eslint-disable-next-line react/jsx-no-undef
@@ -55,6 +58,21 @@ const trendingCards = [
     title="Liquid Wave"
     maker="https://neftify.vercel.app/images/avatar/4.jpg"
   />,
+  <TrendingCard
+    url="https://neftify.vercel.app/images/items/9.jpg"
+    title="Liquid Wave"
+    maker="https://neftify.vercel.app/images/avatar/4.jpg"
+  />,
+  <TrendingCard
+    url="https://neftify.vercel.app/images/items/9.jpg"
+    title="Liquid Wave"
+    maker="https://neftify.vercel.app/images/avatar/4.jpg"
+  />,
+  <TrendingCard
+    url="https://neftify.vercel.app/images/items/9.jpg"
+    title="Liquid Wave"
+    maker="https://neftify.vercel.app/images/avatar/4.jpg"
+  />,
 ];
 
 const Page: NextPageWithLayout = () => {
@@ -71,6 +89,87 @@ const Page: NextPageWithLayout = () => {
       </section>
       <section>
         <Trending />
+      </section>
+      <section>
+        <CreateAndSell />
+      </section>
+      <section>
+        <InfoLayout
+          header={() => {
+            return (
+              <>
+                <h1>Browse by category</h1>
+                <p>Here are a few reasons why you should choose Neftify</p>
+              </>
+            );
+          }}
+          className="grid-cols-4 gap-y-8 gap-x-8"
+        >
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg font-bold py-4 text-center">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-center text-lg   py-4 font-bold">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center  py-4 font-bold">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center font-bold  py-4">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center font-bold  py-4">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center font-bold  py-4">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center font-bold  py-4">Art</h6>
+          </Card>
+          <Card>
+            <img
+              src="https://neftify.vercel.app/images/items/14.jpg"
+              role="presentation"
+              alt="img"
+            />
+            <h6 className="text-lg text-center font-bold  py-4">Art</h6>
+          </Card>
+        </InfoLayout>
       </section>
     </>
   );
@@ -121,56 +220,60 @@ const Gallery = () => {
 
 const Ranking = () => {
   return (
-    <div className="container">
-      <div className="flex flex-col items-center gap-y-4">
-        <h1>Top collections over last 7 days</h1>
-        <p>Here are a few reasons why you should choose Neftify</p>
-      </div>
-      <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 ">
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={1}
-          priceFluctuation="+104.35"
-        />
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={2}
-          priceFluctuation="+104.35"
-        />
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={3}
-          priceFluctuation="+104.35"
-        />
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={4}
-          priceFluctuation="+104.35"
-        />
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={5}
-          priceFluctuation="+104.35"
-        />
-        <RankingCard
-          url="https://neftify.vercel.app/images/items/1.jpg"
-          title="SandBox"
-          price="136305.63"
-          num={6}
-          priceFluctuation="+104.35"
-        />
-      </div>
-    </div>
+    <InfoLayout
+      header={() => {
+        return (
+          <>
+            <h1>Top collections over last 7 days</h1>
+            <p>Here are a few reasons why you should choose Neftify</p>
+          </>
+        );
+      }}
+      className="grid-cols-3 gap-y-8 gap-x-4"
+    >
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={1}
+        priceFluctuation="+104.35"
+      />
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={2}
+        priceFluctuation="+104.35"
+      />
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={3}
+        priceFluctuation="+104.35"
+      />
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={4}
+        priceFluctuation="+104.35"
+      />
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={5}
+        priceFluctuation="+104.35"
+      />
+      <RankingCard
+        url="https://neftify.vercel.app/images/items/1.jpg"
+        title="SandBox"
+        price="136305.63"
+        num={6}
+        priceFluctuation="+104.35"
+      />
+    </InfoLayout>
   );
 };
 
@@ -179,6 +282,43 @@ const Trending = () => {
     <CarouselSeg title="Trending Items">
       <GalleryCarousel items={trendingCards} />
     </CarouselSeg>
+  );
+};
+
+const CreateAndSell = () => {
+  return (
+    <InfoLayout
+      header={() => {
+        return (
+          <>
+            <h1>Top collections over last 7 days</h1>
+            <p>Here are a few reasons why you should choose Neftify</p>
+          </>
+        );
+      }}
+      className="grid-cols-2 gap-y-20 "
+    >
+      <CreateAndSellCard
+        title="Set up your Wallet"
+        summary="Once you’ve set up your wallet of choice, connect it to Neftify by clicking the wallet icon in the top right corner. Learn about the wallets we support."
+        icon={<WalletIcon className="w-8 h-8 text-white" />}
+      />
+      <CreateAndSellCard
+        title="Set up your Wallet"
+        summary="Once you’ve set up your wallet of choice, connect it to Neftify by clicking the wallet icon in the top right corner. Learn about the wallets we support."
+        icon={<WalletIcon className="w-8 h-8 text-white" />}
+      />
+      <CreateAndSellCard
+        title="Set up your Wallet"
+        summary="Once you’ve set up your wallet of choice, connect it to Neftify by clicking the wallet icon in the top right corner. Learn about the wallets we support."
+        icon={<WalletIcon className="w-8 h-8 text-white" />}
+      />
+      <CreateAndSellCard
+        title="Set up your Wallet"
+        summary="Once you’ve set up your wallet of choice, connect it to Neftify by clicking the wallet icon in the top right corner. Learn about the wallets we support."
+        icon={<WalletIcon className="w-8 h-8 text-white" />}
+      />
+    </InfoLayout>
   );
 };
 export default Page;

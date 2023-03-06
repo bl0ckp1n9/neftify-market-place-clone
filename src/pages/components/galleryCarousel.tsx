@@ -15,6 +15,7 @@ export default function GalleryCarousel({ items }: { items: any[] }) {
       items={items}
       disableDotsControls
       responsive={responsive}
+      infinite={true}
       renderPrevButton={() => {
         return (
           <p className="absolute right-16 -top-16 arrow-button ">

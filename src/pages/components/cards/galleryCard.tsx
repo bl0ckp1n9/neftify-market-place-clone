@@ -3,7 +3,7 @@ import Card from "@/pages/components/cards/card";
 type GalleryCardInterface = {
   url: string;
   title: string;
-  summary: string;
+  summary?: string;
 };
 export default function GalleryCard({
   url,
